@@ -1,0 +1,13 @@
+<script>
+    let id
+    let count = 0
+    id = setInterval(() => {
+        console.log(`running every secs(count running:${count})`)
+        count ++
+    }, 1*1000)
+
+    setTimeout(() => {
+        console.log(`timer off`)
+        clearInterval(id)
+    }, 5*1000)
+</script>
