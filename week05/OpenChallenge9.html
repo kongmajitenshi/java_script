@@ -7,11 +7,12 @@
     <style>
         table {border:1px solid blue; border-collapse:collapse;}
         td {border:1px solid blue; width:50px; height:50px; padding:0px;}
+        img {width:49px; height:49px;}
     </style>
     <script>
         let select = 0;
         let img = new Image();
-        img.src = "media/donkey.png";
+        img.src = "../media/donkey.png";
         function set() {
             for(let i=0; i<100; i++) {
                 document.images[i].onclick = moveImage;
