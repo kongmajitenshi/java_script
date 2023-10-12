@@ -1,0 +1,28 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const divA = document.querySelector('#A')
+        const divB = document.querySelector('#B')
+        const h1 = document.createElement('h1')
+
+        h1.textContent = "Moving \'h1\' tag!"
+
+        const toFirst = () => {
+            divA.appendChild(h1)
+            setTimeout(toSecond, 2000)
+        }
+        const toSecond = () => {
+            divB.appendChild(h1)
+            setTimeout(toFirst, 2000)
+        }
+        toFirst();
+    })
+</script>
+<body>
+    <div id="A">
+        <h1>First 'div' tag</h1>
+    </div>
+    <hr>
+    <div id="B">
+        <h1>Second 'div' tag</h1>
+    </div>
+</body>

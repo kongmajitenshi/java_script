@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice9-5</title>
+    <script>
+        function randomColor() {
+            document.ondblclick = function() {
+                let r = Math.floor(Math.random()*256);
+                let g = Math.floor(Math.random()*256);
+                let b = Math.floor(Math.random()*256);
+                document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+            }
+        }
+    </script>
+</head>
+<body onload="randomColor()">
+    <h3>바탕 아무 곳이나 더블 클릭</h3>
+    <hr>
+    <p>press any place <strong>double click</strong> > change backgroundcolor for random.</p>
+</body>
+</html>

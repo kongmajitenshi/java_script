@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P9-10</title>
+    <script>
+        function addInput(value) {
+            let lcd = document.getElementById('lcd');
+            if(lcd.value == '0') { lcd.value = value ;}
+            else { lcd.value += value; }
+        }
+
+        function backword() {
+            let lcd = document.getElementById('lcd');
+            let len = lcd.value.length;
+            if(len == 0) { return;}
+            else { lcd.value = lcd.value.substr(0, len-1); }
+        }
+
+        function calculate() {
+            let lcd = document.getElementById('lcd');
+            lcd.value = eval(lcd.value);
+        }
+
+        function clearLcd() {
+            let lcd = document.getElementById('lcd');
+            lcd.value = 0;
+        }
+        
+    </script>
+    <style>
+        table { text-align: center;
+                border: 0;
+                width: 300px; }
+        tr { text-align: center; }
+        td { width:80px; }
+        input[type=button] { width:60px;}
+    </style>
+</head>
+<body>
+    <h3>calculator</h3>
+    <hr>
+    <form id="cal">
+        <table>
+            <tr><td colspan="4"> <input type="text" id="lcd" value="0" size="50"></td></tr>
+            <tr> 
+                <td> <input type="button" id="back" value="BACK" onclick="backword()"> </td> 
+                <td> <input type="button" id="ce" value="CE" onclick="clearLcd()"> </td> 
+                <td> <input type="button" id="c" value="C" onclick="clearLcd();"> </td> 
+                <td> <input type="button" id="equal" value="=" onclick="calculate()"> </td> 
+            </tr>
+            <tr> 
+                <td> <input type="button" id="seven" value="7" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="eight" value="8" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="nine" value="9" onclick="addInput(this.value)"> </td>
+                <td> <input type="button" id="divi" value="/" onclick="addInput(this.value)"></td> 
+            </tr>
+            <tr> 
+                <td> <input type="button" id="four" value="4" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="five" value="5" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="six" value="6" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="mul" value="*" onclick="addInput(this.value)"> </td> 
+            </tr>
+            <tr> 
+                <td> <input type="button" id="one" value="1" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="two" value="2" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="three" value="3" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="minus" value="-" onclick="addInput(this.value)"> </td> 
+            </tr>
+            <tr> 
+                <td> <input type="button" id="zero" value="0" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="plus" value="+" onclick="addInput(this.value)"> </td> 
+                <td> <input type="button" id="NONE" value="NONE1"> </td> 
+                <td> <input type="button" id="NONE" value="NONE2"> </td> 
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

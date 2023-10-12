@@ -1,0 +1,42 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let counter = 0;
+        let isConnect = false;
+
+        const span = document.querySelector('h1 > span')
+        const p = document.querySelector('p')
+        const connect = document.querySelector('#connect')
+        const discon = document.querySelector('#discon')
+
+        const listener = () => {
+            span.textContent = `${++counter}`
+        }
+
+        connect.addEventListener('click', () => {
+            if(isConnect === false) {
+                isConnect = true
+                p.textContent = 'Connecting Status : Connecting'
+                span.addEventListener('click', listener)
+            }
+        })
+        discon.addEventListener('click', () => {
+            if(isConnect === true) {
+                span.removeEventListener('click', listener);
+                isConnect = false;
+                p.textContent = 'Connecting Status : Disconnecting';
+                
+            }
+        })
+    })
+</script>
+<style>
+    h1 {
+        user-select: none;
+    }
+</style>
+<body>
+    <h1>Click: <span>0</span> </h1>
+    <button id="connect"> Connect </button>
+    <button id="discon"> Disconnect </button>
+    <p>Connecting Status : Disconnecting </p>
+</body>

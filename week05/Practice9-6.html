@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P9-6</title>
+    <script>
+        function controlImageSize(e, img) {
+            if(e.wheelDelta > 0) {
+                img.width += img.width * 0.05
+                img.height += img.height * 0.05
+            } else {
+                img.width -= img.width * 0.05
+                img.height -= img.height * 0.05
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3> image big small by wheel </h3>
+    <hr>
+    <p>휠 굴리면 이미지 확대 및 축소</p>
+    <img src="../media/tulips.png" width="280" height="210" onwheel="controlImageSize(event, this)">
+</body>
+</html>

@@ -1,0 +1,19 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let counter = 0;
+        const span1 = document.querySelector('h1 > span')
+
+        span1.addEventListener('click', () => {
+            counter ++;
+            span1.textContent = `${counter}`
+        })
+    })
+</script>
+<style>
+    h1 {
+        user-select: none;
+    }
+</style>
+<body>
+    <h1>클릭횟수 : <span>0</span> </h1>
+</body>

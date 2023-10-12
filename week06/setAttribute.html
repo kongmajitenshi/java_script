@@ -1,0 +1,17 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const rects = document.querySelectorAll('.rect');
+
+        rects.forEach((cat, catNum) => {
+            source = `../media/cat${catNum+1}.PNG`;
+            cat.setAttribute('src', source);
+            cat.setAttribute('width', '200px');
+        })
+    })
+</script>
+<body>
+    <img class="rect" alt="고양이">
+    <img class="rect" alt="고양이">
+    <img class="rect" alt="고양이">
+    <img class="rect" alt="고양이">
+</body>
