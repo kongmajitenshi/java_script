@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown</title>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 별의 초기 설정
+        const star = document.querySelector('h1')
+        star.style.position = 'absolute'
+
+        // 별의 이동을 출력하는 기능
+        let x = 0;
+        let y = 0; // let [x,y] = [0,0] 으로 묶어서 표현 가능.
+        
+        const block = 20
+        const print = () => { 
+            star.style.left = `${x*block}px`
+            star.style.top = `${y*block}px`
+        }
+        print()
+
+        //별 이동하는 기능
+        const [left, up, right, down] = [37, 38, 39, 40]
+        document.body.addEventListener('keydown', (downkey) => {
+            switch(downkey.keyCode) {
+                case left :
+                    x--;
+                    break
+                case up :
+                    y--;
+                    break
+                case right :
+                    x++;
+                    break
+                case down :
+                    y++;
+                    break
+            }
+            print()
+        })
+    })
+</script>
+</head>
+
+<body>
+    <h1>♥</h1>
+</body>
+</html>
