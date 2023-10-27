@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function1</title>
+</head>
+<script>
+    function isLeapYear(years) {
+        return ((years % 4 == 0) && (years % 100 != 0)) || (years % 400 == 0)
+        // if(years%4==0 && years%100!=0) || (years % 400 == 0) {
+        //     return true
+        // }else{
+        //     return false
+        // }
+    }
+
+    document.write(`2020년은 윤년인가요? ${isLeapYear(2020)} <br>`);
+    document.write(`2010년은 윤년인가요? ${isLeapYear(2010)} <br>`);
+    document.write(`2000년은 윤년인가요? ${isLeapYear(2000)} <br>`);
+    document.write(`1900년은 윤년인가요? ${isLeapYear(1900)} <br>`);
+    document.write(`1966년은 윤년인가요? ${isLeapYear(1966)} <br>`);
+    
+</script>
+<body>
+    
+</body>
+</html>

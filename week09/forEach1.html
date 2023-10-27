@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach1</title>
+    <!-- <style>
+        ul li:nth-child(2n-1) {
+            background-color: yellow;
+            width: 20em;
+        }
+    </style> -->
+</head>
+<script>
+    // const lists = document.querySelectorAll('ul>li')
+    // lists.forEach(function(list,index) {
+    //     list.style.backgroundColor = "yellow";
+    //     list.style.width = "20em"
+    // })
+    document.addEventListener("DOMContentLoaded", () => { // function() {} 형태로도 사용 가능.
+        const lists = document.querySelectorAll('ul>li');
+        lists.forEach(function(list,index) { // (list,index) => {} 형태로도 사용 가능.
+            if(index%2==0) {
+                list.style.backgroundColor = "lightgray";
+                list.style.width = "20em";
+            }
+        })
+    })
+</script>
+<body>
+    <h3>방학 중 가보고 싶은 지역</h3>
+    <ul>
+        <li>일본</li>
+        <li>영국</li>
+        <li>제주도</li>
+        <li>티바트 월드</li>
+        <li>소환사의 협곡</li>
+        <li>흠</li>
+    </ul>
+</body>
+</html>

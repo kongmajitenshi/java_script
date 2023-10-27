@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2</title>
+</head>
+
+<script>
+    function sum(start, end) {
+        let sumNum = 0
+        for(let i=start; i<=end; i++) {
+            sumNum += i
+        }
+        return sumNum
+    }
+
+    document.write(`1~100까지의 합 : ${sum(1,100)} <br>`)
+    document.write(`1~500까지의 합 : ${sum(1,500)} <br>`)
+    document.write(`10~20까지의 합 : ${sum(10,20)} <br>`)
+</script>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function3</title>
+</head>
+
+<script>
+    function pays(name, pay = 9620, hours = 40) { // 디폴트 매개변수
+        document.write(`${name}의 급여 정보 <br>`)
+        document.write(`시급: ${pay}원 <br>`)
+        document.write(`근무 시간: ${hours} <br>`)
+        document.write(`급여: ${pay*hours} <br>`)
+        document.write(`<hr>`)
+    }
+
+    pays("구름"); // name만 보냄.
+
+    // name, pay만 보냄.
+    pays("별", 10000);
+
+    // name, pay, hour 보냄.
+    pays("인성", 10000, 52);
+</script>
+
+<body>
+    
+</body>
+</html>
