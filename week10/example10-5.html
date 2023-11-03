@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example10</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#list_1").parent().css("border","2px dashed #f00")
+        })
+    </script>
+</head>
+
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul>
+        <li>li1
+            <ul>
+                <li id="list_1">li1-1</li>
+                <li>li1-2</li>
+            </ul>
+        </li>
+        <li>li2</li>
+        <li>li3</li>
+    </ul>
+</body>
+</html>
