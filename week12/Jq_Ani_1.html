@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_Ani_1</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function() {
+            $(".btn1").on("click", function() {
+                $(".txt1").animate({
+                    marginLeft:"500px", fontSize:"50px"
+                },
+                200, "linear", function() {
+                    alert("motion complete");
+                });
+            });
+            
+            $(".btn2").on("click", function() {
+                $(".txt2").animate({
+                    marginLeft:"+=50px"
+                }, 100);
+                });
+        });
+    </script>
+    <style>
+        .txt1{background-color: aqua;}
+        .txt2{background-color: pink;}
+    </style>
+</head>
+<body>
+    <p><button class="btn1">btn1</button></p>
+    <span class="txt1">move "500px" </span>
+    <p><button class="btn2">btn2</button></p>
+    <span class="txt2">move "50px" </span>
+</body>
+</html>

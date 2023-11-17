@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_effect1</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".btn2").hide();
+
+            $(".btn1").on("click", function(){
+                $(".box").slideUp(1000, "linear", function(){
+                    $(".btn1").hide();
+                    $(".btn2").show();    
+                })
+            })
+
+            $(".btn2").on("click", function() {
+                $(".box").fadeIn(1000, "swing", function() {
+                    $(".btn1").show();
+                    $(".btn2").hide();    
+                })
+
+                $(".btn3").on("click", function() {
+                    $(".box").slideToggle(1000, "linear")
+                })
+            })
+
+
+            $(".btn1").trigger("click")
+        })
+    </script>
+    <style>
+        button {font-familY : 굴림;
+                font-size : 20px;}
+        .content{
+            font-size:20px;
+            width:600px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            <pre>
+                뭐라쓰지
+                일단아무
+                거나쓰자
+                롤드컵결
+                승전은일
+                요일에함
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
