@@ -21,12 +21,19 @@
                     $(".btn1").show();
                     $(".btn2").hide();    
                 })
-
-                $(".btn3").on("click", function() {
-                    $(".box").slideToggle(1000, "linear")
-                })
+            })  
+            
+            $(".btn3").on("click", function() {
+                $(".box").slideToggle(1000, "linear")
             })
 
+            $(".btn4").on("click", function() {
+                $(".box").fadeTo("fast", 0.3)
+            })
+
+            $(".btn5").on("click", function() {
+                $(".box").fadeTo("fast", 1)
+            })
 
             $(".btn1").trigger("click")
         })
