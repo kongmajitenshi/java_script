@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <script src="../../js/jquery.js"></script>
+
+    <script>
+        $(function() {
+            let square1 = $("#square1")
+            let square2 = $("#square2")
+            square1.on("mouseover", function() {
+                square1.css({
+                    "background-color" : "blue",
+                    "transition" : "2s",
+                })
+            })
+            square2.on("mouseover", function() {
+                square2.css({
+                    "border" : "3px solid red",
+                    "border-radius" : "50%",   
+                    "transition" : "2s",
+                })
+            })
+        })
+    </script>
+
+    <style>
+        #square1{width:200px; height:200px; background-color:aqua; display: inline-block;}
+        #square2{width:200px; height:200px; background-color:chocolate; display: inline-block; border:3px solid black;}
+    </style>
+</head>
+<body>
+    <div id="square1"></div>
+    <div id="square2"></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show2</title>
+    <script src="../../js/jquery.js"></script>
+    <script>
+        $(function(){
+            let showHideText = $(".showHideText")
+            showHideText.css("visibility", "hidden")
+            $(".showHideBtn").on("click", function() {
+                if (showHideText.css("visibility") === "hidden") {
+                    showHideText.css("visibility", "visible")
+                } else {
+                    showHideText.css("visibility", "hidden")
+                }
+            })
+
+        })
+    </script>
+    <style>
+        .showHideText{color:blue}
+    </style>
+</head>
+<body>
+    <div><h1>다음 빈 곳에 숨은 단어? <button class="showHideBtn">show/hide</button></h1></div>
+    <hr>
+    <ul>
+    <li><p>I (<span class="showHideText">love</span>) you.</p></li>
+    <li><p>CSS is Cascading (<span class="showHideText">Style</span>) Sheet.</p></li>
+    <li><p>응답하라 (<span class="showHideText">1988</span>). </p></li>
+    </ul>
+</body>
+</html>
