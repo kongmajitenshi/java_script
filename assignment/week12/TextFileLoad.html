@@ -27,7 +27,7 @@
             $(".zoomButton button").on("click", zoomInOut);
             function zoomInOut() {
                 if($(this).hasClass("zoomOut")) {
-                    if(baseFontSize <= 8) {
+                    if(baseFontSize <= 10) {
                         return false
                     }
                     baseFontSize = baseFontSize - 2;
