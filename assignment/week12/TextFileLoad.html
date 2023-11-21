@@ -5,20 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TextFileLoad</title>
     <script src="../../js/jquery.js"></script>
-    <script>
-
+    <script> // 파일 불러오기
+        function textFileOpen() {
+            let input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function(event) {
+                let file = event.target.files[0];
+                let reader = new FileReader();
+                reader.onload = function(){
+                    output.innerText = reader.result;
+                };
+                reader.readAsText(file, "utf8")
+            };
+            input.click();
+        };
+    </script>
+    <script> // 버튼
+        $(function() {
+            let baseFontSize = 14;
+            $(".zoomButton button").on("click", zoomInOut);
+            function zoomInOut() {
+                if($(this).hasClass("zoomOut")) {
+                    if(baseFontSize <= 8) {
+                        return false
+                    }
+                    baseFontSize = baseFontSize - 2;
+                } else if ($(this).hasClass("zoomIn")) {
+                    if(baseFontSize >= 30) {
+                        return false
+                    }
+                    baseFontSize = baseFontSize + 2;
+                } else {
+                    baseFontSize = 14;
+                }
+                $(".fontSize").text(baseFontSize + "px")
+                $("#output").css({fontSize:baseFontSize + "px"})
+            }
+        })
     </script>
 </head>
 <body>
-    <button>Open</button><br><br>
-    <div>
-        <button>-</button>
-        <button>100%</button>
-        <button>+</button>
+    <button onclick="textFileOpen()">Open</button><br><br>
+    <div class="zoomButton">
+        <button class="zoomOut">-</button>
+        <button class="origin">100%</button>
+        <button class="zoomIn">+</button>
     </div>
     <hr>
-    <p>14px</p>
-    <div>
+    <p class="fontSize">14px</p>
+    <div id="output">
         ...
     </div>
     
