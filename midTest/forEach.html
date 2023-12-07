@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [273,52,103,32,57]
+
+        numbers.forEach(function(value,index){
+            console.log(`${index}번째 요소:${value}`)
+        })
+
+        numbers.forEach(number = (value,index) => {
+            console.log(`${index}:${value}`)
+        })
+        console.log(number)
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headers = document.querySelectorAll('h1')
+
+            headers.forEach(header => {
+                header.textContent = "HEADERS"
+                header.style.color = 'white'
+                header.style.backgroundColor = 'black'
+                header.style.padding = '10px'
+            })
+        })
+    </script>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>

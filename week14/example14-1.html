@@ -1,0 +1,16 @@
+<script>
+let pi = 3.14; // 전역변수
+console.log(`파이값은 ${pi}이다.`) // 전역변수
+{
+    let pi = 3.141592; // 지역변수
+    console.log(`파이값은 ${pi}이다.`) // 지역변수
+}
+let pi = 3.14; // 전역변수
+console.log(`파이값은 ${pi}이다.`) // 전역변수
+function sample() {
+    let pi = 3.141592; // 전역변수
+    console.log(`파이값은 ${pi}이다.`) // 지역변수
+}   
+sample();
+console.log(`파이값은${pi}이다.`) // 전역변수
+</script>
